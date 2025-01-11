@@ -32,7 +32,7 @@
                         <li class="dropdown-item">Smartphones</li>
                         <li class="dropdown-item">Accessoires</li>
                         <li class="dropdown-item">Gaming</li>
-                        <li class="dropdown-item">Accessoires</li>
+                        <li class="dropdown-item">Vétements</li>
                     </ul>
                 </div>
                 <input type="text" placeholder="Rechercher" />
@@ -43,16 +43,14 @@
                 </a>
             </div>
             <div class="user-cart-container pt-3">
-                <a href="">
+                <a href="/pages/login/choice.html">
                     <button class="user">
                         <img src="img/user.svg" alt="user">
                     </button>
                 </a>
-                <a href="">
-                    <button class="cart">
+                    <button id="cart-icon" class="cart">
                         <img src="img/cart.svg" alt="cart">
                     </button>
-                </a>
             </div>
 
         </div>
@@ -73,7 +71,7 @@
                                 <a class="nav-link" href="#">Offres</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Nos contactes</a>
+                                <a class="nav-link" href="#contact">Nos contactes</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -93,7 +91,17 @@
         </nav>
 
     </header>
-
+    <!-- cart overlay-->
+    <div class="overlay" id="overlay"></div>
+    <div class="cart-window " id="cart-window">
+        <div class="cart-header">Your Cart</div>
+        <div class="cart-items" id="cart-items">
+          <!-- Cart items or empty message will be displayed here -->
+        </div>
+        <div class="cart-footer">
+          <p class="total" id="cart-total"></p>
+        </div>
+      </div>
     <main>
         <section id="carousel-1" class="carousel slide container mt-5" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -324,7 +332,7 @@
     <footer class=" pt-5">
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-2">
-                <div class="col">
+                <div id="contact" class="col">
                     <h3>Informations de contact:</h3>
                     <ul>
                         <li><span class="icons"><img src="img/icons/location.png" alt="location icon"></span>Campus Universitaire 7035 Menzel Abderrahmane Bizerte</li>
@@ -334,9 +342,9 @@
                 </div>
                 <div class="col">
                     <h3>Newsletter:</h3>
-                    <form class="d-flex align-items-center justify-content-between pb-2" >
+                    <form id="newsletter-form" class="d-flex align-items-center justify-content-between pb-2" >
                         <span class="icons"><img src="img/icons/mail.png" alt="mail icon"></span>
-                        <input class="px-1" type="email" placeholder="Entrer votre email">
+                        <input id="newsletter-input" class="px-1" type="email" placeholder="Entrer votre email">
                         <button type="submit"><span class="icons"><img src="img/icons/arrow.png" alt="arrow icon"></span></button>
                     </form>
                     <div class="social-icons mt-5">

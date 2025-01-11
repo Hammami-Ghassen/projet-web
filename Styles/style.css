@@ -190,6 +190,7 @@ header .container {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 5px;
   text-decoration: none;
+  transition: box-shadow 0.3s ease;
 }
 .card-body{
   padding: 0;
@@ -242,9 +243,14 @@ footer li a{
   text-decoration: none;
 }
 footer form{
-  border-bottom: 1px solid var(--price-color);
+  border-bottom: 1px solid white;
+  transition: border-color 0.5s ease;
 }
-footer input{
+footer form.focused{
+  border-bottom: 1px solid var(--second-color);
+  scale: 1.02;
+}
+footer form input{
   background-color: transparent;
   border: none;
   outline: none;
@@ -271,4 +277,103 @@ footer .col{
 }
 .social-icons svg:hover{
   transform: translateY(-20%);
+}
+
+
+
+/*floating cart css*/
+.cart-icon {
+  cursor: pointer;
+  font-size: 24px;
+  background-color: white;
+  color: #2C3E50;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1000;
+}
+
+/* Cart Window */
+.cart-window {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 350px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: none;
+  z-index: 1002;
+  padding: 15px;
+}
+
+.cart-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2C3E50;
+}
+
+.cart-items {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.cart-item-info {
+  flex-grow: 1;
+}
+
+.cart-item-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cart-item-price {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+.cart-item-remove {
+  color: #E74C3C;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cart-footer {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.empty-message {
+  text-align: center;
+  color: #888;
+  font-size: 16px;
+  margin: 20px 0;
 }

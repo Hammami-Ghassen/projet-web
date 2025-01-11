@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Styles/login/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Connecter à votre compte</h2>
+        <form id="loginForm">
+            <label for="identifier">Email, nom d'utilisateur ou téléphone</label>
+            <input type="text" id="identifier" name="identifier" required>
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" required>
+            <div class="forgot-password">
+                <a href="#" class="link">Mot de passe oublié?</a>
+            </div>
+            <div class="checkbox-container">
+                <label><input type="checkbox"> Rester connecté</label>
+            </div>
+            <button type="submit">Connecter</button>
+        </form>
+        <p>Vous n'avez pas un compte? <a href="choice.html" class="link">Créer</a>.</p>
+    </div>
+</body>
+</html>

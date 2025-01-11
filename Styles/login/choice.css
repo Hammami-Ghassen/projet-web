@@ -1,0 +1,107 @@
+body {
+    background-color: #f0f0f0;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#arrow-icon {
+    position: fixed;
+    top: 20px; /* Adjust the top position */
+    left: 20px; /* Adjust the left position */
+    z-index: 1000; /* Ensure the icon is above other content */
+    width: 50px; /* Set appropriate width */
+    height: auto; /* Set appropriate height */
+    transition: transform 200ms ease; /* Apply smooth transition to the transform property */
+}
+#arrow-icon:hover {
+    transform: scale(1.15); /* Increase the size of the icon on hover */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the link-container and connect-container vertically */
+    align-items: center; /* Center the link-container and connect-container horizontally */
+    width: 100%;
+    height: 100vh;
+}
+
+.link-container {
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    align-items: center; /* Center the links vertically */
+    gap: 100px; /* Space between the links */
+    margin-bottom: 100px; /* Reduce space between link-container and connect-container */
+}
+
+.container a {
+    height: 0;
+    width: 150px;
+    text-align: center; /* Center the text inside the link */
+    text-decoration: none; /* Remove underline from links */
+    color: #1d1d1d; /* Set link text color */
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center;
+    margin-bottom: 40%;
+}
+
+.container a:hover {
+    color: #E67E22;
+}
+
+.container a img {
+    margin-bottom: 20px; /* Space between icon and text */
+    width: 100%; /* Set appropriate width */
+    pointer-events: none; /* Make the image unclickable */
+}
+
+.connect-container {
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    align-items: center;
+    gap: 10px; /* Space between the paragraph and the link */
+}
+
+.connect-container p {
+    font-weight: 400 !important; /* Ensure font-weight is applied */
+    color: #11111399; /* Set link text color */  
+}
+.connect-container a {
+    display: inline;
+    text-decoration: underline;
+    font-weight: 400 !important; /* Ensure font-weight is applied */
+    color: #E67E22; /* Set link text color */
+    margin-top: 100px; /* Remove any top margin */
+    padding: 0; /* Remove padding */
+}
+.connect-container a:hover {
+    color: #82580c;
+}
+@media (max-width: 600px) {
+    body {
+        background-color: #f0f0f0;
+        font-family: 'Inter', sans-serif;
+        font-size: small;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+    }
+    #arrow-icon {
+        width: 35px; /* Set appropriate width */
+        height: auto; /* Set appropriate height */
+    }
+    .container a {
+        margin-bottom: 50%;
+    }
+    .container a img {
+        margin-bottom: 20px; /* Space between icon and text */
+        width: 60%; /* Set appropriate width */
+    }
+
+    .link-container {
+        gap: 20px; /* Space between the links */
+        margin-bottom: 30px; /* Reduce space between link-container and connect-container */
+    }
+}
