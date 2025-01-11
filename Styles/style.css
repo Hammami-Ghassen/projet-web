@@ -225,6 +225,7 @@ header .container {
   color: var(--main-color);
 }
 footer{
+  position: absolute;
   width: 100%;
   background-color: var(--main-color);
   color: white;  
@@ -241,7 +242,7 @@ footer li a{
   text-decoration: none;
 }
 footer form{
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--price-color);
 }
 footer input{
   background-color: transparent;
@@ -258,6 +259,16 @@ footer .col{
   margin-bottom: 1.5rem;
 }
 .social-icons{
-  width: var(--size-sm);
-  fill: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-icons svg{
+  width: var(--size-3xl);
+  margin: calc(100% / 14);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.social-icons svg:hover{
+  transform: translateY(-20%);
 }
