@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
 :root {
   --main-color: #2C3E50;
   --second-color: #E67E22;
-  --price-color: #FFC107;
+  --price-color: #f60;
   /* sizes */
   --size-xxs: 0.5rem;
   --size-xs: 0.75rem;
@@ -24,6 +27,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", serif;
 }
 
 html {
@@ -33,15 +37,14 @@ html {
 body {
   background-color: #EBE9E9;
 }
-
+.container {
+  max-width: 1000px;
+}
 header {
   background-color: var(--main-color);
   position: sticky;
   top: 0;
   z-index: 1000;
-}
-.container {
-  max-width: 960px;
 }
 header .container {
   display: flex;
@@ -140,6 +143,7 @@ header .container {
 }
 
 .navbar {
+  background-color: var(--second-color);
   padding: 0;
 
 }
@@ -189,6 +193,8 @@ header .container {
 }
 .card-body{
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 .card-img{
   width: 100%;
@@ -196,6 +202,7 @@ header .container {
 }
 .price{
   color:var(--price-color) ;
+  margin-top: auto;
 }
 .card-title{
   font-size: var(--size-base);
@@ -205,8 +212,7 @@ header .container {
   scale: 1.01;
   cursor: pointer;
 }
-.swiper-button-next,
-.swiper-button-prev {
+.Cards-Nav-Next, .Cards-Nav-Prev {
   width: var(--size-lg);
   top: 50%;
   transform: translateY(-50%);
@@ -214,4 +220,44 @@ header .container {
   justify-content: center;
   align-items: center;
   color: var(--main-color);
+}
+.sections-title{
+  color: var(--main-color);
+}
+footer{
+  width: 100%;
+  background-color: var(--main-color);
+  color: white;  
+}
+footer .icons img{
+  width: var(--size-xl);
+  padding-right: 5px;
+}
+footer li{
+  list-style: none;
+}
+footer li a{
+  color: white;
+  text-decoration: none;
+}
+footer form{
+  border-bottom: 1px solid white;
+}
+footer input{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  width: 100%;
+}
+footer button{
+  background-color: transparent;
+  border: none;
+}
+footer .col{
+  margin-bottom: 1.5rem;
+}
+.social-icons{
+  width: var(--size-sm);
+  fill: white;
 }
