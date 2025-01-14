@@ -92,6 +92,3 @@ const cartIcon = document.getElementById('cart-icon');
       cartWindow.style.display = 'none';
       overlay.style.display = 'none';
     });
-
-    // Add a sample product to the cart for testing
-    addToCart({ id: 1, title: "Sample Product", price: 19.99, image: "https://via.placeholder.com/50" });
