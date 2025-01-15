@@ -1,0 +1,5 @@
+J'ai utiliser le framework bootstrap pur améliorer le design
+J'ai ajouter un carousel
+J'ai utiliser le bibliothéque Swiper JS pour faire le card slider
+J'ai fait le design de la page d'accueuil et les formulaire d'inscription sur figma
+J'ai faii le deploiment du site (lien: https://hammami-ghassen.github.io/projet-web/)
